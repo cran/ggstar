@@ -34,15 +34,20 @@ geom_star <- function(mapping = NULL,
           inherit.aes = inherit.aes)
 }
 
+#' GeomStar
 #' @importFrom ggplot2 aes ggproto Geom
 #' @importFrom grid viewport gpar
 #' @author Shuangbin Xu
+#' @rdname ggstar-ggproto
+#' @format NULL
+#' @usage NULL
+#' @export
 GeomStar <- ggproto("GeomStar", 
                     Geom, 
                     required_aes = c("x", "y"),
                     non_missing_aes = c("size", "starshape"),
-                    default_aes = aes(size = 1.5, fill = "black", starshape=1, 
-                                      angle=0, colour = NA, alpha = 1,  
+                    default_aes = aes(size = 1.5, colour = "black", starshape=1, 
+                                      angle=0, fill = NA, alpha = 1,  
                                       phase=0, starstroke=0.5),
                     draw_key = draw_key_star,
                     draw_panel=function(data, panel_params, coord){
@@ -54,7 +59,7 @@ GeomStar <- ggproto("GeomStar",
                                           y=coords$y,
                                           gp=gpar(fill = alpha(coords$fill, coords$alpha),
                                                   col = alpha(coords$colour, coords$alpha),
-                                                  fontsize = (coords$size * .pt + coords$starstroke * .starstroke/2)/4,
+                                                  fontsize = (coords$size * .pt + coords$starstroke * .starstroke/2)/5,
                                                   lwd = coords$starstroke * .starstroke / 2),
                                           starshape = coords$starshape,
                                           angle = coords$angle,
