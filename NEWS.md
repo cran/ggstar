@@ -1,3 +1,12 @@
+# ggstar 1.0.1
+
++ don't use svg dev. (20200210, Wed)
+
+# ggstar 0.0.9.1
+
++ next new development version before next release version. (20200710, Fri)
++ `color` to `fill` in vignettes. (20201023, Fri)
+
 # ggstar 0.0.9
 
 + 0.0.7 and 0.0.8 has been skipped, because they didn't pass the check of `CRAN`,
