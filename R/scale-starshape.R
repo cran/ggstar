@@ -1,7 +1,7 @@
 #' Scales for starshapes, aka glyphs 
 #'
-#' `scale_starshape` maps discrete variables to six easily discernible starshapes.
-#' If you have more than 6 levels, you will get a warning message, and the
+#' `scale_starshape` maps discrete variables to nine easily discernible shapes ('starshapes').
+#' If you have more than 9 levels, you will get a warning message, and the
 #' seventh and subsequence levels will not appear on the plot. Use
 #' [scale_starshape_manual()] to supply your own values. You can not map
 #' a continuous variable to shape.
@@ -11,7 +11,7 @@
 #' @rdname scale_starshape
 #' @importFrom ggplot2 discrete_scale
 #' @export
-scale_starshape <- function(default=TRUE,...){
+scale_starshape <- function(..., default=TRUE){
     discrete_scale("starshape", "starshape_d", starshape_pal(default), ...)
 }
 
@@ -46,7 +46,7 @@ starshape_pal <- function(default=TRUE){
         warning(paste(strwrap(msg), collapse = "\n"), call. = FALSE)
     }
     if (default){
-        c(1, 2, 9, 4, 3, 5, 6, 11, 12)[seq_len(n)]
+        c(1, 2, 9, 4, 12, 14, 29, 6, 27)[seq_len(n)]
     }else{
         c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)[seq_len(n)]
     }

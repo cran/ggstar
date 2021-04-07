@@ -1,5 +1,7 @@
 # ggstar 1.0.1
 
++ changed default starshapes. (2021-02-04, Thu)
++ modified the dev of vignettes. (2021-02-04, Thu)
 + don't use svg dev. (20200210, Wed)
 
 # ggstar 0.0.9.1

@@ -1,5 +1,5 @@
 ## ---- echo=FALSE, results="asis", message=FALSE, KnitrSetUp-------------------
-knitr::opts_chunk$set(tidy=FALSE,warning=FALSE,message=FALSE)
+knitr::opts_chunk$set(tidy=FALSE,warning=FALSE,message=FALSE,dev="svg",eval=capabilities("cairo"))
 Biocpkg <- function (pkg){
     sprintf("[%s](http://bioconductor.org/packages/%s)", pkg, pkg)
 }
@@ -18,7 +18,7 @@ library(ggstar)
 p1 <- show_starshapes()
 p1
 
-## ---- fig.width=6, fig.height=5, fig.align="center",  sizeshape---------------
+## ---- fig.width=6, fig.height=5, fig.align="center", sizeshape----------------
 library(ggplot2)
 library(ggstar)
 p2 <- ggplot(data=iris, aes(x=Sepal.Width,y=Sepal.Length)) + 
