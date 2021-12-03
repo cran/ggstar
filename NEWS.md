@@ -1,3 +1,16 @@
+# ggstar 1.0.3
+
++ adjust the default order of `starshape`, now is 
+  1, 13, 15, 11, 12, 14, 29, 2, 27. (2021-12-03, Fri) 
++ supporting `subset` in `aes`. (2021-06-28, Mod)
+  - This is useful to display the data that meets some conditions.
+    - `ggtree(tr) + geom_star(mapping=aes(subset=isTip))`
+
+# ggstar 1.0.2
+
++ new version to `CRAN`. (2021-04-07, Wed)
++ update the man and help. (2021-04-07, Wed)
+
 # ggstar 1.0.1
 
 + changed default starshapes. (2021-02-04, Thu)
