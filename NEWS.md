@@ -1,3 +1,18 @@
+# ggstar 1.0.6
+
++ add a version dependency on the new `ggiraph`. (2025-09-19, Fri)
+
+# ggstar 1.0.5
+
++ add scale_starshape_interactive. (2025-09-03, Wed)
++ add `geom_star_interactive` which can work with `ggiraph`. (2025-08-05, Tue, @aymennasri, #7)
+  - <https://github.com/xiangpin/ggstar/issues/7>
++ add new shape (starshape = 32). (2024-04-07, Sun, @brunomioto, #5)
+  - <https://github.com/xiangpin/ggstar/issues/5>
++ add `semicircle` shape (starshape = 31). (2023-07-26, Wed, @lch14forever, #4)
+  - <https://github.com/xiangpin/ggstar/issues/4>
++ add `scale_angle_manual`. (2023-07-26, Wed)
+
 # ggstar 1.0.4
 
 + import `cli` and update some man to be compatible with ggplot2v3.4.0 (2022-10-11, Tue)

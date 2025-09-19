@@ -7,12 +7,12 @@
 #' a continuous variable to shape.
 #'
 #' @param default should the starshapes be default?
-#' @inheritDotParams ggplot2::discrete_scale -expand -position
+#' @inheritDotParams ggplot2::discrete_scale -expand -position -scale_name
 #' @rdname scale_starshape
 #' @importFrom ggplot2 discrete_scale
 #' @export
 scale_starshape <- function(..., default=TRUE){
-    discrete_scale("starshape", "starshape_d", starshape_pal(default), ...)
+    discrete_scale(aesthetics="starshape", palette = starshape_pal(default), ...)
 }
 
 #' @rdname scale_starshape
@@ -56,3 +56,4 @@ starshape_pal <- function(default=TRUE){
         return (res)
     }
 }
+
